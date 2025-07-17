@@ -1,0 +1,350 @@
+/* ===== BASE STYLES ===== */
+:root {
+  --primary: #0d1b2a;
+  --secondary: #1b263b;
+  --accent: #d93025;
+  --text-light: #e6f1ff;
+  --text-dark: #1a1a1a;
+  --code-accent: #64ffda;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.custom-navbar {
+  background-color: var(--primary);
+  padding: 15px 0;
+  border-bottom: 2px solid var(--accent);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--code-accent) !important;
+}
+
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.text-code {
+  font-family: 'Fira Code', monospace;
+  color: var(--accent);
+  font-weight: normal;
+}
+
+.code-var {
+  font-family: 'Fira Code', monospace;
+  background: #f1f1f1;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  background-color: var(--primary);
+  color: white;
+  padding: 40px 0;
+}
+
+.stats-bar h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--code-accent);
+}
+
+/* ===== FEATURES ===== */
+.features-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-family: 'Fira Code', monospace;
+  color: var(--primary);
+  margin-bottom: 50px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 80%;
+  width: 4px;
+  background: var(--accent);
+}
+
+.feature-card {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.code-icon {
+  font-family: 'Fira Code', monospace;
+}
+
+.code-link {
+  font-family: 'Fira Code', monospace;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  transition: all 0.3s;
+}
+
+.code-link:hover {
+  color: var(--primary);
+}
+
+/* ===== ALUMNI SECTION ===== */
+.alumni-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  padding: 80px 0;
+  background: var(--primary);
+  color: white;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--secondary);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer h4 {
+  color: var(--code-accent);
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer ul li a:hover {
+  color: var(--code-accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .stats-bar h3 {
+    font-size: 1.8rem;
+  }
+}
+/* ===== BUTTON ENHANCEMENTS ===== */
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+  border: 1px solid var(--accent);
+  transition: all 0.3s;
+}
+
+.btn-accent:hover {
+  background-color: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-light {
+  transition: all 0.3s;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Button sizing */
+.btn-sm {
+  padding: 0.375rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Navbar button spacing */
+@media (min-width: 992px) {
+  .navbar-nav .btn {
+    margin-top: 0;
+    align-self: center;
+  }
+}
+
+/* Hero section buttons */
+.hero-section .btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.hero-section .btn-accent {
+  background-color: var(--accent);
+  color: white;
+}
+
+.hero-section .btn-accent:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.hero-section .btn-outline-primary {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.hero-section .btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* CTA button */
+.cta-section .btn-accent {
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+}
+/* ===== ABOUT PAGE ===== */
+.terminal {
+  background: #011627;
+  border: 1px solid var(--code-accent);
+  color: var(--text-light);
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Fira Code', monospace;
+  margin-bottom: 20px;
+}
+
+/* ===== CONTACT PAGE ===== */
+.terminal-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.terminal-input {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.terminal-input:focus {
+  border-color: var(--code-accent);
+  box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.25);
+}
+
+/* ===== EVENTS PAGE ===== */
+.terminal-card {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 25px;
+  height: 100%;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.terminal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: var(--code-accent);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--primary);
+  color: white;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.mt-60 {
+  margin-top: 60px;
+}
